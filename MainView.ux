@@ -1,0 +1,28 @@
+<App>
+	<Router ux:Name="router" />
+	<Font File="fonts/fontawesome-webfont.ttf" ux:Global="fa" />
+	
+	<JavaScript>
+		exports.showWindowPage = function()
+		{
+			router.goto("showWindowPage");
+		}
+		
+		exports.howToUseIconsUXPage = function()
+		{
+			router.goto("howToUseIconsUXPage");
+		}
+	</JavaScript>
+	
+	<DockPanel>
+		<Grid ColumnCount="2" Dock="Top" Padding="0, 0, 0, 10">
+			<Basic.Button Text="ShowWindow" Clicked="{showWindowPage}" />
+			<Basic.Button Text="HowToUse_Icons.ux" Clicked="{howToUseIconsUXPage}" />
+		</Grid>
+		
+		<Navigator DefaultTemplate="showWindowPage">
+	        <ShowWindowPage ux:Template="showWindowPage" router="router" />
+	        <HowToUse_Icons_ux ux:Template="howToUseIconsUXPage" router="router" />
+	    </Navigator>
+	</DockPanel>
+</App>

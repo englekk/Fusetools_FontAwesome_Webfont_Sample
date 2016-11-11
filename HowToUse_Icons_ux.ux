@@ -1,0 +1,7 @@
+<Page ux:Class="HowToUse_Icons_ux">
+	<Router ux:Dependency="router" />
+	
+	<ux:Include File="Icons.ux" />
+
+	<fa_apple FontSize="150" TextAlignment="Center" Padding="30" />
+</Page>
